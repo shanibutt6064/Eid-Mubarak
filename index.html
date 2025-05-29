@@ -1,0 +1,382 @@
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd4fce5f3d028740a225ebc3c822e9f84',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/d4fce5f3d028740a225ebc3c822e9f84/invoke.js"></script>
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Laila:wght@400;700&family=Hind:wght@400;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind', 'Laila', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #004d40, #00796b, #26a69a); /* Teal/Green gradient */
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden; /* Hide scrollbars from flower overflow */
+            position: relative;
+        }
+
+        .flower-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* So flowers don't interfere with clicks */
+            z-index: 0; /* Behind content */
+        }
+
+        .flower {
+            position: absolute;
+            font-size: 20px; /* Size of the flower character */
+            color: white;
+            opacity: 0.7;
+            user-select: none; /* Prevent text selection of flowers */
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            0% {
+                transform: translateY(-5vh) rotate(0deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent dark background */
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 10px rgba(255, 255, 255, 0.2); /* Subtle gold/white glow */
+            border: 2px solid #FFD700; /* Gold border */
+            max-width: 550px;
+            width: 90%;
+            z-index: 10; /* Keep content above flowers */
+            position: relative;
+        }
+
+        img.main-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #80cbc4; /* Light teal border for GIF */
+        }
+
+        .greeting-message {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: 'Laila', 'Amiri', cursive; /* Amiri is a good Arabic style font */
+            color: #FFF;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 1s 0.5s ease-out forwards;
+        }
+
+        .greeting-message .sender-name {
+            color: #FFD700; /* Gold */
+            animation: pulseName 2s infinite ease-in-out;
+        }
+
+        @keyframes fadeInSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseName {
+            0%, 100% { transform: scale(1); text-shadow: 0 0 5px #FFD700; }
+            50% { transform: scale(1.08); text-shadow: 0 0 15px #FFD700, 0 0 25px #f0e68c; }
+        }
+
+        .input-group {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            width: calc(100% - 28px);
+            border: 1px solid #80cbc4;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-family: 'Hind', sans-serif;
+        }
+        input[type="text"]::placeholder {
+            color: #b2dfdb; /* Light teal placeholder */
+        }
+        
+        #whatsappShareButton {
+            background: #25D366; /* WhatsApp Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+            font-family: 'Hind', sans-serif;
+            display: flex; /* For aligning icon and text */
+            align-items: center; /* For aligning icon and text */
+            justify-content: center; /* For aligning icon and text */
+            width: 100%; /* Make button full width of its parent */
+            max-width: 300px; /* Optional: constraint max width */
+            margin: 0 auto; /* Center button */
+        }
+
+        #whatsappShareButton svg {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+            fill: white;
+        }
+
+
+        #whatsappShareButton:hover {
+            background: #1DAE54; /* Darker WhatsApp Green */
+            box-shadow: 0 6px 15px rgba(37, 211, 102, 0.6);
+            transform: translateY(-2px);
+        }
+
+        #generatedLinkContainer {
+            margin-top: 20px;
+            word-break: break-all;
+            background-color: rgba(255,255,255,0.05);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #generatedLink {
+            font-weight: bold;
+            color: #FFD700; /* Gold */
+            font-size: 14px;
+        }
+
+        .share-label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #b2dfdb; /* Light teal */
+            display: block;
+        }
+
+        .decoration-top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+            color: rgba(255, 215, 0, 0.5);
+            z-index: 1;
+            opacity: 0.7;
+        }
+         .decoration-bottom-left {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 30px;
+            color: rgba(255, 215, 0, 0.5);
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flower-container" id="flowerContainer">
+        <!-- Flowers will be added here by JavaScript -->
+    </div>
+
+    <div class="decoration-top-right">🌙✨</div>
+    <div class="decoration-bottom-left">✨</div>
+
+
+    <div class="container">
+        <img src="Eid-Mubarak-GIF.gif" alt="Eid Mubarak GIF" class="main-gif">
+
+        <div id="greetingMessage" class="greeting-message" style="opacity:0;">
+            <!-- Greeting will be inserted here by JavaScript -->
+        </div>
+
+        <div class="input-group">
+            <label for="nameInput" class="share-label">Apna Naam Likhein:</label>
+            <input type="text" id="nameInput" placeholder="Yahan apna naam type karein...">
+            <button onclick="shareOnWhatsApp()" id="whatsappShareButton">
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 2.003A13.995 13.995 0 0 0 2.003 16c0 3.032.974 5.853 2.644 8.203L2.988 30.14l6.065-1.624a13.923 13.923 0 0 0 6.948 1.48h.003A13.995 13.995 0 0 0 16 2.003zm0 25.99c-2.334 0-4.575-.637-6.508-1.79l-.466-.276-4.852 1.298 1.32-4.73-.305-.488A11.946 11.946 0 0 1 4.003 16c0-6.617 5.378-11.995 11.997-11.995S27.997 9.383 27.997 16c0 6.618-5.378 11.995-11.997 11.995zM22.822 19.255c-.26-.132-1.542-.76-1.782-.848-.24-.088-.416-.132-.59.132-.176.264-.674.848-.826.98-.15.132-.3.15-.56.044-.26-.11-.92-.308-1.976-1.186C15.92 17.33 15.195 16.39 14.98 16.06c-.216-.33-.015-.51.11-.667.114-.142.26-.35.39-.49.13-.14.175-.24.26-.41.088-.177.045-.33-.022-.46-.066-.13-.59-1.42-.81-1.94-.21-.508-.42-.43-.59-.43-.165 0-.35 0-.52 0-.175 0-.46.06-.7.33-.24.26-.92.9-1.12 2.19-.21 1.28.24 2.73.67 3.58.44.85 1.6 2.68 3.79 4.49 2.5 2.07 3.9 2.58 5.3 2.81.32.048.96.03 1.33-.18.42-.24.67-.84.78-1.22.1-.37.06-.68-.02-.81z"/>
+                </svg>
+                WhatsApp par Share Karein
+            </button>
+        </div>
+
+        <div id="generatedLinkContainer" style="display: none;">
+            <p style="color: #FFD700; margin-bottom: 5px;">Yeh link copy karke share karein:</p>
+            <span id="generatedLink"></span>
+            <button onclick="copyLink()" style="margin-left: 10px; background: #00796b; color:white; box-shadow: 0 4px 10px rgba(0, 121, 107, 0.4); padding: 8px 15px; border: none; border-radius: 5px; font-size: 14px; cursor: pointer;">Copy Link</button>
+        </div>
+    </div>
+
+    <script>
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        function getPageUrlWithoutQuery() {
+            return window.location.origin + window.location.pathname;
+        }
+
+        const greetingDiv = document.getElementById('greetingMessage');
+        const nameInput = document.getElementById('nameInput');
+        const generatedLinkContainer = document.getElementById('generatedLinkContainer');
+        const generatedLinkSpan = document.getElementById('generatedLink');
+        const flowerContainer = document.getElementById('flowerContainer');
+
+        window.onload = function() {
+            const senderName = getParameterByName('sender');
+            let greetingText = "<strong>Eid Mubarak!</strong>";
+
+            if (senderName) {
+                greetingText = `<strong>Eid Mubarak!</strong> <br><span style="font-size:0.8em;">Aapko <span class="sender-name">${senderName}</span> ki taraf se!</span>`;
+            }
+            
+            greetingDiv.innerHTML = greetingText;
+            greetingDiv.style.opacity = '0'; 
+            void greetingDiv.offsetWidth; 
+            greetingDiv.style.animation = 'none';
+            setTimeout(() => {
+                greetingDiv.style.animation = '';
+                greetingDiv.style.opacity = '1';
+            }, 10);
+
+            startFlowerFall();
+        };
+
+        function displayGeneratedLink(link) {
+            generatedLinkSpan.textContent = link;
+            generatedLinkContainer.style.display = 'block';
+        }
+
+        function shareOnWhatsApp() {
+            const name = nameInput.value.trim();
+            if (name === "") {
+                alert("Please apna naam enter karein.");
+                return;
+            }
+            const baseUrl = getPageUrlWithoutQuery();
+            const shareableLink = `${baseUrl}?sender=${encodeURIComponent(name)}`;
+            
+            // Display the link for copying
+            displayGeneratedLink(shareableLink);
+
+            // Prepare WhatsApp message
+            const whatsappMessage = encodeURIComponent(`Eid Mubarak! 🌙✨\n\n${name} ki taraf se yeh eidi dekhein:\n${shareableLink}`);
+            const whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
+            
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+        }
+
+
+        function copyLink() {
+            const linkText = generatedLinkSpan.textContent;
+            navigator.clipboard.writeText(linkText).then(function() {
+                alert('Link copied to clipboard!');
+            }, function(err) {
+                alert('Link copy karne mein error: ', err);
+                 try {
+                    const textArea = document.createElement("textarea");
+                    textArea.value = linkText;
+                    document.body.appendChild(textArea);
+                    textArea.focus();
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Link copied (fallback)!');
+                } catch (e) {
+                    alert('Copy karne mein problem hui. Manual copy karein.');
+                }
+            });
+        }
+
+        const flowerChars = ['✿', '❀', '✽', '✼', '❁', '✾', '❋', '⚘']; // Added more flower types
+        const flowerColors = ['#FFD700', '#FFB6C1', '#ADD8E6', '#90EE90', '#FFFFFF', '#F0E68C', '#FFDEAD', '#E6E6FA']; // Gold, Pink, LightBlue, LightGreen, White, Khaki, NavajoWhite, Lavender
+
+        function createFlower() {
+            const flower = document.createElement('span');
+            flower.classList.add('flower');
+            flower.textContent = flowerChars[Math.floor(Math.random() * flowerChars.length)];
+            flower.style.color = flowerColors[Math.floor(Math.random() * flowerColors.length)];
+            
+            flower.style.left = Math.random() * 100 + 'vw'; 
+            flower.style.fontSize = (Math.random() * 15 + 12) + 'px'; // Size 12px to 27px
+            
+            const duration = Math.random() * 6 + 4; // 4 to 10 seconds for falling
+            flower.style.animationDuration = duration + 's';
+            
+            flower.style.animationDelay = Math.random() * 4 + 's'; // Delay up to 4 seconds
+
+            flowerContainer.appendChild(flower);
+
+            flower.addEventListener('animationend', () => {
+                flower.remove();
+            });
+            setTimeout(() => {
+                if (flower.parentElement) {
+                    flower.remove();
+                }
+            }, (duration + 5) * 1000); 
+        }
+
+        function startFlowerFall() {
+            const numberOfFlowersInitially = 75; // Increased initial burst
+            for (let i = 0; i < numberOfFlowersInitially; i++) {
+                setTimeout(createFlower, i * 60); // Faster initial spawning
+            }
+            setInterval(createFlower, 700); // Add a new flower more frequently
+        }
+
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'd4fce5f3d028740a225ebc3c822e9f84',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//www.highperformanceformat.com/d4fce5f3d028740a225ebc3c822e9f84/invoke.js"></script>
